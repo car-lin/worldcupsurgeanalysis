@@ -1,0 +1,9 @@
+pandas
+requests
+pyyaml
+python-dotenv
+azure-storage-blob
+pyspark
+sqlalchemy
+psycopg2-binary
+comtradeapicall
