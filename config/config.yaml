@@ -1,0 +1,61 @@
+project:
+  name: worldcup-demand-surge
+
+azure:
+  container_name: worldcupdata22
+
+countries:
+  qatar:
+    iso3: QAT
+    comtrade_code: "634"
+  usa:
+    iso3: USA
+    comtrade_code: "842"
+  canada:
+    iso3: CAN
+    comtrade_code: "124"
+  mexico:
+    iso3: MEX
+    comtrade_code: "484"
+
+years:
+  qatar_training: [2019, 2020, 2021, 2022]
+  host_prediction: [2023, 2024, 2025]
+  worldbank: [2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  cbp: [2019, 2021, 2022, 2023]
+
+comtrade:
+  frequency: M
+  classification: HS
+  flow: M
+  commodity_level: HS2
+
+worldbank_indicators:
+  NY.GDP.PCAP.CD: gdp_per_capita
+  NE.TRD.GNFS.ZS: trade_percent_gdp
+  FP.CPI.TOTL.ZG: inflation_percent
+  SP.POP.TOTL: population
+
+cbp:
+  host_counties:
+    - {city: New York, state: NY, county_fips: "36061"}
+    - {city: Los Angeles, state: CA, county_fips: "06037"}
+    - {city: Dallas, state: TX, county_fips: "48113"}
+    - {city: San Francisco, state: CA, county_fips: "06075"}
+    - {city: Seattle, state: WA, county_fips: "53033"}
+    - {city: Kansas City, state: MO, county_fips: "29095"}
+    - {city: Miami, state: FL, county_fips: "12086"}
+    - {city: Atlanta, state: GA, county_fips: "13121"}
+    - {city: Boston, state: MA, county_fips: "25025"}
+    - {city: Philadelphia, state: PA, county_fips: "42101"}
+    - {city: Houston, state: TX, county_fips: "48201"}
+
+  naics_sectors:
+    "23": Construction
+    "42": Wholesale Trade
+    "44": Retail Trade
+    "45": Retail Trade
+    "48": Transportation
+    "49": Warehousing
+    "71": Arts Entertainment Recreation
+    "72": Accommodation Food Services
